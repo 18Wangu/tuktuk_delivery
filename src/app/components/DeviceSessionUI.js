@@ -45,13 +45,14 @@ import {
           padding: 10,
         }}
       >
-        {/*<p>SessionId: {deviceSessionId}</p>
+        {/*<p>SessionId: {deviceSessionId}</p>*/}
         <p>
-          Device Session status: Device{" "}
+          Ledger : {" "}
           <b style={{ padding: 3, borderRadius: 3, backgroundColor }}>
             {deviceSessionState?.deviceStatus ?? "loading"}
           </b>
         </p>
+        {/*
         {firmwareVersion ? <p>Firmware version: {firmwareVersion.os}</p> : null}
         {currentApp ? (
           <p>

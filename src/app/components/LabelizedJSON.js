@@ -9,7 +9,7 @@ export const LabelizedJSON = ({ label, value }) => (
         marginTop: 10,
       }}
     >
-      {/*<b>{label}:</b>
+      <b>{label}:</b>
       <pre>
         {value
           ? JSON.stringify(
@@ -19,7 +19,7 @@ export const LabelizedJSON = ({ label, value }) => (
             )
           : "undefined"}
         {value instanceof Error ? "\n\n" + value.stack : ""}
-      </pre>*/}
+      </pre>
     </div>
   );
   
