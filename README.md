@@ -24,6 +24,7 @@ A decentralized app to order street food in Bangkok, like Uber Eats but on-chain
 
 Our solution not only optimizes the food delivery process but also addresses pain points of centralized platforms, offering a more equitable, efficient, and secure system for customers, vendors, and delivery drivers.
 
+
 ## 🚀 Features
 Frontend:  
 - Built with Next.js.  
@@ -46,6 +47,7 @@ Push Protocol powers real-time updates to keep all stakeholders informed during 
 
 This combination of technologies enables us to deliver a decentralized platform that is transparent, secure, and user-friendly while effectively solving real-world challenges in food delivery.
 
+
 ## 📦 Installation  
 1. **Clone the repository**:  
    ```bash  
@@ -63,8 +65,10 @@ This combination of technologies enables us to deliver a decentralized platform 
    npm run dev  
    ```  
 
+
 ## 📖 Contribution  
 @Valyors
+
 
 ## 📝 License  
 This project is licensed under the MIT License.  
