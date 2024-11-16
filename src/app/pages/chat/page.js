@@ -33,12 +33,9 @@ function ChatPage() {
       });
       setUser(userAlice);
 
-      const storedMessages = localStorage.getItem('messages');
-      if (storedMessages) {
-        setMessages(JSON.parse(storedMessages));
-      } else {
-        await fetchMessages(userAlice);
-      }
+      // Clear messages on page refresh
+      setMessages([]);
+      await fetchMessages(userAlice);
     } catch (err) {
       console.error('Error initializing user:', err);
       setError('Unable to retrieve messages.');
@@ -50,10 +47,9 @@ function ChatPage() {
       const response = await userAlice.chat.history(receiverAddress);
       const receivedMessages = response.messages || [];
       setMessages(receivedMessages);
-      localStorage.setItem('messages', JSON.stringify(receivedMessages));
     } catch (err) {
       console.error('Error fetching messages:', err);
-      setError('Unable to retrieve message history.');
+      // setError('Unable to retrieve message history.');
     }
   };
 
@@ -74,18 +70,30 @@ function ChatPage() {
         return;
       }
 
+      // Envoi du message
       const response = await user.chat.send(receiverAddress, {
         content: messageContent,
         type: 'Text',
       });
 
+      // Ajout du message envoyé à l'interface
       const newMessages = [
         ...messages,
         { sender: 'You', content: messageContent, timestamp: Date.now() },
       ];
       setMessages(newMessages);
-      localStorage.setItem('messages', JSON.stringify(newMessages));
       setMessageContent('');
+
+      // Simuler la réponse après 10 secondes
+      setTimeout(() => {
+        const simulatedResponse = {
+          sender: 'TukTukBot',
+          content: `Thank you for your message: "${messageContent}". We'll get back to you shortly!`,
+          timestamp: Date.now() + 10000, // 10 secondes plus tard
+        };
+
+        setMessages((prevMessages) => [...prevMessages, simulatedResponse]);
+      }, 10000);
     } catch (err) {
       console.error('Error sending message:', err);
       setError('Unable to send the message.');
