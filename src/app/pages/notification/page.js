@@ -38,7 +38,7 @@ const Notification = () => {
       console.log("b");
 
       // Récupérer les notifications
-      const channelAddress = "0x2D4Ec5dd34bCaff6c1998575763E12597092A044";
+      const channelAddress = "0x00270677B33bdDA535959C61DCB4f33d0ef5Fcf4";
       const allNotifications = await userAlice.channel.notifications(channelAddress);
       console.log(allNotifications)
       setNotifications(allNotifications.notifications);
