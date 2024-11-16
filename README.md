@@ -1,7 +1,5 @@
 # 🚛 TukTuk Delivery  
 
- Got it! Here's the updated version:  
-
 A decentralized app to order street food in Bangkok, like Uber Eats but on-chain! Track orders, transparent payments, real-time notifications via **Push Protocol**, secure transactions with **Ledger**, and live chat using Push Protocol.🍜
 
 ![cover](https://github.com/user-attachments/assets/4c7d79c7-977c-4047-8b01-05fcce650dca)
