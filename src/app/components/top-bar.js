@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function TopBar() {
     return (
@@ -18,12 +19,14 @@ export default function TopBar() {
             </div>
         </div>
         <div>
-            <Image
-                src="/bell.png"
-                alt="Notifications"
-                width={30}
-                height={30}
-            />
+            <Link href="/pages/notification">
+                <Image
+                    src="/bell.png"
+                    alt="Notifications"
+                    width={30}
+                    height={30}
+                />
+            </Link>
         </div>
       </div>
     );
