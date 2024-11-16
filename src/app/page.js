@@ -14,140 +14,130 @@ export default function Home() {
           alt="Profil image"
           width={1920}
           height={1080}
-          className="w-full h-auto object-cover rounded-lg"
+          className="w-full h-auto object-cover rounded-lg mb-4"
         />
         
         {/* 1st resto */}
-        <div className="flex border rounded-md">
+        <div className="flex  border-black rounded-lg my-2">
           <div>
             <Image
               src="/pad-thai.jpg"
-              alt="Profil image"
+              alt="Pad Thai"
               width={100}
               height={100}
+              className="rounded-lg"
             />
           </div>
-          <div>
-            <h1>TukTuk resto</h1>
-            <h2>255 Bath</h2>
-            <h2>15 min</h2>
-          </div>
-        </div>
-
-        {/* 2nd resto */}
-        <div className="flex border rounded-md">
-          <div>
-            <Image
-              src="/pad-thai.jpg"
-              alt="Profil image"
-              width={100}
-              height={100}
-            />
-          </div>
-          <div>
-            <h1>Blabla resto</h1>
-            <h2>800 Bath</h2>
-            <h2>5 min</h2>
-          </div>
-        </div>
-
-        {/* 2nd resto */}
-        <div className="flex border rounded-md">
-          <div>
-            <Image
-              src="/pad-thai.jpg"
-              alt="Profil image"
-              width={100}
-              height={100}
-            />
-          </div>
-          <div>
-            <h1>Blabla resto</h1>
-            <h2>800 Bath</h2>
-            <h2>5 min</h2>
+          <div className="text-black ml-3">
+            <h1 className="text-xl">Chef Thanom</h1>
+            <h2 className="text-xs">฿300–400</h2>
+            <h2 className="text-xs">15 min</h2>
           </div>
         </div>
         {/* 2nd resto */}
-        <div className="flex border rounded-md">
+        <div className="flex  border-black rounded-lg my-2">
           <div>
             <Image
-              src="/pad-thai.jpg"
-              alt="Profil image"
+              src="/tom-yum.jpg"
+              alt="Tom Yum Food"
               width={100}
               height={100}
+              className="rounded-lg"
             />
           </div>
-          <div>
-            <h1>Blabla resto</h1>
-            <h2>800 Bath</h2>
-            <h2>5 min</h2>
+          <div className="text-black ml-3">
+            <h1 className="text-xl">Jim Thompson</h1>
+            <h2 className="text-xs">฿350</h2>
+            <h2 className="text-xs">7 min</h2>
           </div>
         </div>
-        {/* 2nd resto */}
-        <div className="flex border rounded-md">
+        {/* 3rd resto */}
+        <div className="flex  border-black rounded-lg my-2">
           <div>
             <Image
-              src="/pad-thai.jpg"
-              alt="Profil image"
+              src="/soup.jpg"
+              alt="Tom Yum Food"
               width={100}
               height={100}
+              className="rounded-lg"
             />
           </div>
-          <div>
-            <h1>Blabla resto</h1>
-            <h2>800 Bath</h2>
-            <h2>5 min</h2>
+          <div className="text-black ml-3">
+            <h1 className="text-xl">Jim Thompson</h1>
+            <h2 className="text-xs">฿350</h2>
+            <h2 className="text-xs">7 min</h2>
           </div>
         </div>
-        {/* 2nd resto */}
-        <div className="flex border rounded-md">
+        {/* 4th resto */}
+        <div className="flex  border-black rounded-lg my-2">
           <div>
             <Image
-              src="/pad-thai.jpg"
-              alt="Profil image"
+              src="/brochette.jpg"
+              alt="Tom Yum Food"
               width={100}
               height={100}
+              className="rounded-lg"
             />
           </div>
-          <div>
-            <h1>Blabla resto</h1>
-            <h2>800 Bath</h2>
-            <h2>5 min</h2>
+          <div className="text-black ml-3">
+            <h1 className="text-xl">Jim Thompson</h1>
+            <h2 className="text-xs">฿350</h2>
+            <h2 className="text-xs">7 min</h2>
           </div>
         </div>
-        {/* 2nd resto */}
-        <div className="flex border rounded-md">
+        {/* 5th resto */}
+        <div className="flex  border-black rounded-lg my-2">
           <div>
             <Image
-              src="/pad-thai.jpg"
-              alt="Profil image"
+              src="/carrot.jpg"
+              alt="Tom Yum Food"
               width={100}
               height={100}
+              className="rounded-lg"
             />
           </div>
-          <div>
-            <h1>Blabla resto</h1>
-            <h2>800 Bath</h2>
-            <h2>5 min</h2>
+          <div className="text-black ml-3">
+            <h1 className="text-xl">Jim Thompson</h1>
+            <h2 className="text-xs">฿350</h2>
+            <h2 className="text-xs">7 min</h2>
           </div>
         </div>
-        {/* 2nd resto */}
-        <div className="flex border rounded-md">
+        {/* 6th resto */}
+        <div className="flex  border-black rounded-lg my-2">
           <div>
             <Image
-              src="/pad-thai.jpg"
-              alt="Profil image"
+              src="/thai-breakfast.jpg"
+              alt="Tom Yum Food"
               width={100}
               height={100}
+              className="rounded-lg"
             />
           </div>
+          <div className="text-black ml-3">
+            <h1 className="text-xl">Jim Thompson</h1>
+            <h2 className="text-xs">฿350</h2>
+            <h2 className="text-xs">7 min</h2>
+          </div>
+        </div>
+        {/* 7th resto */}
+        <div className="flex  border-black rounded-lg my-2 mb-20">
           <div>
-            <h1>Blabla resto</h1>
-            <h2>800 Bath</h2>
-            <h2>5 min</h2>
+            <Image
+              src="/thai-coconut.jpg"
+              alt="Tom Yum Food"
+              width={100}
+              height={100}
+              className="rounded-lg"
+            />
+          </div>
+          <div className="text-black ml-3">
+            <h1 className="text-xl">Jim Thompson</h1>
+            <h2 className="text-xs">฿350</h2>
+            <h2 className="text-xs">7 min</h2>
           </div>
         </div>
       </div>
+      
 
       {/* nav bar */}
       <Navbar />

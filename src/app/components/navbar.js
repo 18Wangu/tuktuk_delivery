@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="fixed bottom-0 w-full bg-[#F8F9E9] border-t-2 border-black">
+    <div className="fixed bottom-0 w-screen bg-[#F8F9E9] border-t-2 border-black">
         <div className="flex justify-around my-3">
             <Link href="/">
                 <Image
