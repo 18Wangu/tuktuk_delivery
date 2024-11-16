@@ -1,10 +1,9 @@
-Voici un exemple de README structuré pour ton projet **TukTuk Delivery** :
-
----
-
 # 🚛 TukTuk Delivery  
 
-TukTuk Delivery est une plateforme innovante pour organiser et gérer des livraisons de manière rapide, efficace et économique, en utilisant des tuk-tuks comme principal moyen de transport. Ce projet combine **technologie**, **durabilité** et **logistique urbaine** pour offrir une solution adaptée aux défis des livraisons dans les villes animées.  
+A decentralized app to order street food in Bangkok, like Uber Eats but on-chain! Track orders, transparent payments, and real-time notifications via Push Protocol. 🍜
+
+![cover](https://github.com/user-attachments/assets/4c7d79c7-977c-4047-8b01-05fcce650dca)
+
 
 ## 🎯 Objectif  
 Créer un système de gestion de livraisons qui :  
@@ -66,12 +65,3 @@ Les contributions sont les bienvenues ! Pour contribuer :
 
 ## 📝 Licence  
 Ce projet est sous licence MIT. Consulte le fichier [LICENSE](LICENSE) pour plus d’informations.  
-
-## 📬 Contact  
-Pour toute question ou suggestion, n'hésite pas à me contacter :  
-- **GitHub** : [@18Wangu](https://github.com/18Wangu)  
-- **Email** : theo.premartin@etud.univ-angers.fr  
-
---- 
-
-Dis-moi si tu veux des modifications ou des ajouts spécifiques ! 😊
