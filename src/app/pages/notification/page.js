@@ -58,13 +58,13 @@ const Notification = () => {
     <div className="bg-[#F8F9E9] px-5 text-black">
         <TopBar />
         <div>
-        {/*
+        
         <p>Compte connecté : {account ? account : "Aucun compte connecté"}</p>
         
-        <button onClick={connectMetaMask} style={{ marginBottom: "20px", padding: "10px 20px" }}>
+        <button onClick={connectMetaMask} className="px-3 py-2 rounded-3xl bg-black text-white">
             Connecter MetaMask
         </button>
-        */}
+        
 
         {loading ? (
             <p>Chargement des notifications...</p>
