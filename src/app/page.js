@@ -4,7 +4,7 @@ import TopBar from "./components/top-bar";
 
 export default function Home() {
   return (
-    <div className="bg-[#F8F9E9]">
+    <div className="bg-[#F8F9E9] px-5">
       <TopBar />
       
       {/* home screen */}
@@ -14,7 +14,7 @@ export default function Home() {
           alt="Profil image"
           width={1920}
           height={1080}
-          className="w-full h-auto object-cover rounded-b-lg"
+          className="w-full h-auto object-cover rounded-lg"
         />
         
         {/* 1st resto */}
