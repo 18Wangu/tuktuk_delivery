@@ -5,6 +5,7 @@ import { ethers } from "ethers";
 import { PushAPI, CONSTANTS } from "@pushprotocol/restapi";
 import TopBar from "@/app/components/top-bar";
 import Image from "next/image";
+import Navbar from "@/app/components/navbar";
 
 const Notification = () => {
   const [account, setAccount] = useState(null);
@@ -55,40 +56,43 @@ const Notification = () => {
   }, []);
 
   return (
-    <div className="bg-[#F8F9E9] px-5 text-black">
-        <TopBar />
-        <div>
-        
-        <p>Compte connecté : {account ? account : "Aucun compte connecté"}</p>
-        
-        <button onClick={connectMetaMask} className="px-3 py-2 rounded-3xl bg-black text-white">
-            Connecter MetaMask
-        </button>
-        
+    <div className="bg-[#F8F9E9]">
+      <div className="px-5 text-black">
+          <TopBar />
+          <div>
+          {/*
+          <p>Compte connecté : {account ? account : "Aucun compte connecté"}</p>
+          
+          <button onClick={connectMetaMask} className="px-3 py-2 rounded-3xl bg-black text-white">
+              Connecter MetaMask
+          </button>
+          */}
 
-        {loading ? (
-            <p>Chargement des notifications...</p>
-        ) : notifications.length > 0 ? (
-            <ul>
-            {notifications.map((notification, index) => (
-                <li key={index} class="px-6 py-3 rounded-3xl shadow-lg flex items-center">
-                    <Image
-                        src="/logo.png"
-                        alt="logo"
-                        width={50}
-                        height={50}
-                    />
-                    <div className="ml-3">
-                        <p><strong>{notification.message.notification.title}</strong></p>
-                        <p className="text-xs">{notification.message.notification.body}</p>
-                    </div>
-                </li>
-            ))}
-            </ul>
-        ) : (
-            <p>No notification available.</p>
-        )}
-        </div>
+          {loading ? (
+              <p>Chargement des notifications...</p>
+          ) : notifications.length > 0 ? (
+              <ul>
+              {notifications.map((notification, index) => (
+                  <li key={index} class="px-6 py-3 rounded-3xl shadow-lg flex items-center">
+                      <Image
+                          src="/logo.png"
+                          alt="logo"
+                          width={50}
+                          height={50}
+                      />
+                      <div className="ml-3">
+                          <p><strong>{notification.message.notification.title}</strong></p>
+                          <p className="text-xs">{notification.message.notification.body}</p>
+                      </div>
+                  </li>
+              ))}
+              </ul>
+          ) : (
+              <p>No notification available.</p>
+          )}
+          </div>
+      </div>
+      <Navbar />
     </div>
   );
 };
