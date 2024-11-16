@@ -88,7 +88,7 @@ function ChatPage() {
       setTimeout(() => {
         const simulatedResponse = {
           sender: 'TukTukBot',
-          content: `Thank you for your message: "${messageContent}". We'll get back to you shortly!`,
+          content: `Hello, it will be ready in 6 minutes. Thank you for your patience!`,
           timestamp: Date.now() + 10000, // 10 secondes plus tard
         };
 
