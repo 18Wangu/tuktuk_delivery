@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { PushAPI, CONSTANTS } from '@pushprotocol/restapi';
 import { ethers } from 'ethers';
+import TopBar from '@/app/components/top-bar';
+import Navbar from '@/app/components/navbar';
 
 function ChatPage() {
   const [messages, setMessages] = useState([]);
@@ -97,42 +99,48 @@ function ChatPage() {
   }, []);
 
   return (
-    <div className="bg-[#F8F9E9] min-h-screen p-5">
-      <h1 className="text-2xl font-bold text-center text-black mb-4">Chat TukTuk Delivery</h1>
-      {error && <p className="text-red-500 text-center">{error}</p>}
+    <div className='bg-[#F8F9E9]'>
+      <div className='px-5'>
+        <TopBar />
+        <div className="min-h-screen p-5">
+          <h1 className="text-2xl font-bold text-center text-black mb-4">Chat TukTuk Delivery</h1>
+          {error && <p className="text-red-500 text-center">{error}</p>}
 
-      <div className="bg-white rounded-lg shadow-md p-5 mb-4">
-        {messages.length > 0 ? (
-          messages.map((msg, index) => (
-            <div
-              key={index}
-              className={`p-3 my-2 rounded-lg ${
-                msg.sender === 'You' ? 'bg-green-200 text-right' : 'bg-gray-200 text-left'
-              }`}
-            >
-              <strong className="text-black">{msg.sender}:</strong>
-              <p>{msg.content}</p>
-              <small className="text-gray-500">{new Date(msg.timestamp).toLocaleString()}</small>
-            </div>
-          ))
-        ) : (
-          <p className="text-center text-gray-600">No messages available.</p>
-        )}
+          <div className="bg-white rounded-lg shadow-md p-5 mb-4">
+            {messages.length > 0 ? (
+              messages.map((msg, index) => (
+                <div
+                  key={index}
+                  className={`p-3 my-2 rounded-lg ${
+                    msg.sender === 'You' ? 'bg-green-200 text-right' : 'bg-gray-200 text-left'
+                  }`}
+                >
+                  <strong className="text-black">{msg.sender}:</strong>
+                  <p className='text-black'>{msg.content}</p>
+                  <small className="text-black">{new Date(msg.timestamp).toLocaleString()}</small>
+                </div>
+              ))
+            ) : (
+              <p className="text-center text-gray-600">No messages available.</p>
+            )}
+          </div>
+
+          <textarea
+            value={messageContent}
+            onChange={(e) => setMessageContent(e.target.value)}
+            placeholder="Type your message"
+            className="text-black w-full p-3 border rounded-lg mb-3 focus:outline-none focus:ring-2 focus:ring-green-300"
+          />
+
+          <button
+            onClick={sendMessage}
+            className="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition mb-24"
+          >
+            Send Message
+          </button>
+        </div>
       </div>
-
-      <textarea
-        value={messageContent}
-        onChange={(e) => setMessageContent(e.target.value)}
-        placeholder="Type your message"
-        className="w-full p-3 border rounded-lg mb-3 focus:outline-none focus:ring-2 focus:ring-green-300"
-      />
-
-      <button
-        onClick={sendMessage}
-        className="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition"
-      >
-        Send Message
-      </button>
+      <Navbar />
     </div>
   );
 }
